@@ -35,7 +35,7 @@ jobs:
         continue-on-error: true
         run: |
           oldArtifactPath="${{ steps.sign-release-apk.outputs.signedReleaseFile }}"
-          newArtifactPath="${oldArtifactPath%'-signed.apk'}.apk"
+          newArtifactPath="${oldArtifactPath%'-unsigned-signed.apk'}.apk"
           echo "ARTIFACT_PATH=$newArtifactPath" >> $GITHUB_ENV
           mv "$oldArtifactPath" "$newArtifactPath"
       - name: Upload artifact
