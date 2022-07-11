@@ -69,6 +69,10 @@ android {
     ignore 'InvalidVectorPath'
   }
 
+  lintOptions {
+    abortOnError false
+  }
+
   packagingOptions {
     exclude '/DebugProbesKt.bin'
     exclude '/kotlin/**.kotlin_builtins'
